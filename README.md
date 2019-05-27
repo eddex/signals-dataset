@@ -14,6 +14,19 @@ There are 37 different signals.
 - 9 Number signals with black font and white background on a low pole (stop-signals)
 - 1 start signal: blue and white striped signal on high pole
 
+## camera settings
+
+```
+camera = PiCamera()
+camera.exposure_mode = 'off'
+camera.resolution = (416, 416)
+camera.brightness = 55
+camera.framerate = 15
+camera.shutter_speed = 3100
+camera.rotation = 0
+camera.iso = 1200
+```
+
 ## how the data has been collected
 
 - The train was set to full speed (7) and slow driving (2) while taking images.
