@@ -4,6 +4,30 @@ This dataset is used to traing a YOLOv3 object detector on signals with differen
 
 used for https://github.com/eddex/pren2
 
+## annotations
+
+**bounding-boxes-digits**
+
+Bounding boxes around digits, no distinction between different colors.
+
+Total number of annotations: 540
+
+class        | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | start
+-------------|---|---|---|---|---|---|---|---|---|---
+annotations  | 32 | 18 | 63 | 81 | 62 | 68 | 113 | 60 | 31 | 12
+distribution | 5.9% | 3.3% | 11.7% | 15.0% | 11.5% | 12.6% | 20.9% | 11.1% | 5.7% | 2.2%
+
+**bounding-boxes-digits-infolks**
+
+Bounding boxes around digits, no distinction between different colors. Annotation done by [INFOLKS](http://www.infolks.info/).
+
+Total number of annotations: 5687
+
+class        | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | start
+-------------|---|---|---|---|---|---|---|---|---|---
+annotations  | 534 | 494 | 716 | 612 | 690 | 503 | 779 | 617 | 456 | 286
+distribution | 9.4% | 8.7% | 12.6% | 10.8% | 12.1% | 8.8% | 13.7% | 10.8% | 8.0% | 5.0%
+
 ## the data
 
 There are 37 different signals.
