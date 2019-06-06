@@ -20,12 +20,12 @@ def get_class_index_from_file(file_path):
             return int(lines[0].strip().split()[0])
 
 
-def get_label_files_by_class():
+def get_labels_files_by_class():
     '''
     returns a list of lists of labels file paths
     ordered by the class index of the first enty in the file
     '''
-    emty_files = 0
+    empty_files = 0
     files_by_class = []
     for i in range(CLASSES):
         files_by_class.append([])
@@ -34,14 +34,14 @@ def get_label_files_by_class():
         class_index = get_class_index_from_file(labels_file)
         
         if class_index < 0:
-            emty_files += 1
+            empty_files += 1
         else:
             files_by_class[class_index].append(labels_file)
 
     for f in files_by_class:
         print(len(f))
 
-    print("empty files: {}".format(emty_files))
+    print("empty files: {}".format(empty_files))
 
     return files_by_class
 
@@ -91,14 +91,14 @@ def prepare_dataset():
 
     # train/test split will make the configured split on a class basis
     # this is done to ensure a good distribution of each class in the train and test set
-    label_files_by_class = get_label_files_by_class()
+    labels_files_by_class = get_labels_files_by_class()
 
     train_labels_files = []
     test_labels_files = []
 
     split = 1 / AMOUNT_OF_TEST_DATA
     count = 0
-    for files_for_one_class in label_files_by_class:
+    for files_for_one_class in labels_files_by_class:
         for f in files_for_one_class:
             count += 1
             if count < split:
